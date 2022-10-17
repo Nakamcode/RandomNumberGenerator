@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --border-color: #ffffff91;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6173e7;
+  position: relative;
+}
+.container {
+  position: relative;
+  width: 20em;
+  padding: 30px;
+  background-color: #ffffff33;
+  backdrop-filter: blur(100px);
+  border: 2px solid var(--border-color);
+}
+.container::after {
+  content: "Random Number Generator";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: -10%;
+  left: 50%;
+  width: 100%;
+  background-color: #7dacf8;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.4em;
+  font-weight: 900;
+  color: #1f0303;
+  padding: 5px 0;
+}
+#prompt {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: -20%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4em;
+  color: #120101;
+  padding: 5px 0;
+  display: none;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.612);
+  outline: 2px solid var(--border-color);
+  text-align: center;
+}
+label {
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
+.result {
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+  margin: 30px 0;
+  padding: 30px;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: red;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  box-shadow: 0 5px 5px rgba(41, 9, 9, 0.276);
+  border: 2px solid rgba(8, 1, 1, 0.724);
+}
+button:active {
+  background-color: rgb(159, 29, 29);
+}
